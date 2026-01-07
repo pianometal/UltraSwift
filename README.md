@@ -24,6 +24,12 @@ Things that make Swift even more ultra.
 
 ![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-green.svg)
 
+#### Xcode
+
+```
+https://github.com/pianometal/UltraSwift.git
+```
+
 #### Package
 
 ```swift
@@ -36,10 +42,4 @@ dependencies: [
 targets: [
     .target(name: "MyTarget", dependencies: [.byName(name: "UltraSwift")]),
 ]
-```
-
-#### Xcode
-
-```
-https://github.com/Pianometal-Studios/PianometalUI.git
 ```
