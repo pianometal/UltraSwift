@@ -51,7 +51,7 @@ nonisolated public extension Edge {
     /// - Precondition:
     ///   - When `orientation` is `.horizontal`, `self` is `.leading` or `.trailing`;
     ///   - When `orientation` is `.vertical`, `self` is `.top` or `.bottom`.
-    func toEdge(_ orientation: Orientation) -> Self? {
+    func toEdge(_ orientation: Edge.Orientation) -> Self? {
         switch orientation {
         case .horizontal: horizontal()?.toEdge()
         case .vertical: vertical()?.toEdge()
