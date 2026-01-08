@@ -60,7 +60,10 @@ nonisolated public extension Double {
     ///
     /// - Authors: [@pianometal](https://github.com/pianometal)
     func currency(_ identifier: String = "USD") -> String {
-        let code = Locale.current.currency?.identifier ?? identifier
+        guard let code = Locale.current.currency?.identifier else {
+            printOnDebug("Cannot resolve currency code from current locale. Using fallback: \(identifier)")
+            return self.formatted(.currency(code: identifier))
+        }
         return self.formatted(.currency(code: code))
     }
     
