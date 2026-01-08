@@ -23,7 +23,7 @@ nonisolated public extension Font.Design {
         }
     }
     
-    /// - Returns: An array of all standard `Font.Design` cases.
+    /// - Returns: An array of all standard `Font.Design` cases, sorted by name
     ///
     /// - Authors: [@pianometal](https://github.com/pianometal)
     static let allCases: [Font.Design] = [
@@ -32,15 +32,6 @@ nonisolated public extension Font.Design {
         .rounded,
         .monospaced
     ]
-    
-    /// Compares two `Font.Design` values based on their names.
-    ///
-    /// - Sorted by `name`
-    ///
-    /// - Authors: [@pianometal](https://github.com/pianometal)
-    static func < (lhs: Self, rhs: Self) -> Bool {
-        lhs.name < rhs.name
-    }
 }
 
 // MARK: - Preview
