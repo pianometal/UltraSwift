@@ -27,3 +27,44 @@ nonisolated public extension Font.Design {
         .monospaced
     ]
 }
+
+#if DEBUG
+#Preview {
+    
+    @Previewable @State var design = Font.Design.default
+    
+    VStack {
+        
+        VStack {
+            
+            Text(design.name)
+                .font(.largeTitle)
+            
+            Text("The quick brown fox jumps over the lazy dog.")
+                .font(.caption)
+            
+        }
+        .contentTransition(.numericText())
+        .fontDesign(design)
+        .padding()
+        
+        ForEach(Font.Design.allCases, id: \.self) { style in
+            
+            Button {
+                
+                withAnimation(.smooth) { design = style }
+                
+            } label: {
+                
+                Text(style.name)
+                    .font(.title2)
+                    .fontDesign(style)
+                    .foregroundStyle(design == style ? .primary : .secondary)
+                    .padding()
+            }
+            .buttonStyle(.glassProminent)
+        }
+    }
+    .tint(.primary)
+}
+#endif
