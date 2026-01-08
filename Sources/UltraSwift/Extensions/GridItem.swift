@@ -65,3 +65,39 @@ nonisolated public extension GridItem {
         return generate(sizeClass == .regular ? 2 : 1)
     }
 }
+
+#if DEBUG
+#Preview {
+    @Previewable @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    ScrollView {
+        LazyVGrid(columns: GridItem.list(horizontalSizeClass), pinnedViews: .sectionHeaders) {
+            Section {
+                ForEach(0..<100) { index in
+                    LabeledContent("Item Number", value: index.formatted())
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .glass(isInteractive: false, tint: .blue.opacity(0.2))
+                }
+            } header: {
+                Text("GridItem Demo")
+                    .font(.title)
+                    .bold()
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .glass(isRegular: false)
+            }
+        }
+        .padding()
+    }
+    .safeAreaBar(edge: .bottom) {
+        LabeledContent {
+            Text(horizontalSizeClass.name)
+        } label: {
+            Text("Horizontal Size Class")
+        }
+        .padding()
+        .glass(isRegular: false)
+        .padding(.horizontal)
+    }
+}
+#endif
