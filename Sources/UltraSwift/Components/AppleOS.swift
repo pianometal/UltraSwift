@@ -15,7 +15,7 @@ import SwiftUI
 /// an SF Symbols glyph identifier, and a canonical display name.
 ///
 /// - Authors: [@pianometal](https://github.com/pianometal)
-nonisolated public enum AppleOS: String, Staticable, Searchable, Iconable {
+nonisolated public enum AppleOS: String, Staticable, Searchable, Iconable, Describable {
     
     case iOS
     case iPadOS
@@ -25,7 +25,7 @@ nonisolated public enum AppleOS: String, Staticable, Searchable, Iconable {
     case watchOS
     
     /// - Returns: A human-readable device name associated with the platform.
-    public var device: String {
+    public var details: String {
         switch self {
         case .iOS:      "iPhone"
         case .iPadOS:   "iPad"
@@ -49,17 +49,29 @@ nonisolated public enum AppleOS: String, Staticable, Searchable, Iconable {
     }
     
     /// - Returns: The canonical display name of the platform.
-    public var name: String {
-        switch self {
-        case .iOS:      "iOS"
-        case .iPadOS:   "iPadOS"
-        case .macOS:    "macOS"
-        case .tvOS:     "tvOS"
-        case .watchOS:  "watchOS"
-        case .visionOS: "visionOS"
-        }
+    public var name: String { rawValue }
+    
+    /// Determines if the platform corresponds to the current operating system.
+    ///
+    /// - Returns: `true` if the platform corresponds to the current operating system.
+    public var isCurrent: Bool {
+        #if os(iOS)
+        self == .iOS || self == .iPadOS
+        #elseif os(macOS)
+        self == .macOS
+        #elseif os(tvOS)
+        self == .tvOS
+        #elseif os(watchOS)
+        self == .watchOS
+        #elseif os(visionOS)
+        self == .visionOS
+        #else
+        false
+        #endif
     }
 }
+
+// MARK: - Preview
 
 #if DEBUG
 #Preview {
@@ -67,10 +79,15 @@ nonisolated public enum AppleOS: String, Staticable, Searchable, Iconable {
         ForEach(AppleOS.allCases) { os in
             Label {
                 Text(os.name)
-                Text(os.device)
+                    .bold()
+                Text(os.details)
+                if os.isCurrent {
+                    Text("Current")
+                        .foregroundStyle(.red)
+                }
             } icon: {
                 Image(systemName: os.icon)
-                    .font(.title)
+                    .font(.title2)
             }
         }
     }

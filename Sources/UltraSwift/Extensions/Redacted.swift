@@ -29,3 +29,23 @@ public extension View {
         redacted(reason: isRedacted ? .placeholder : [])
     }
 }
+
+// MARK: - Preview
+
+#if DEBUG
+#Preview {
+    @Previewable @State var isRedacted = true
+    VStack {
+        Text("This is an example of redacted content.")
+            .redacted(isRedacted)
+        Button {
+            withAnimation { isRedacted.toggle() }
+        } label: {
+            Text(isRedacted ? "Show" : "Redact")
+                .font(.title2)
+        }
+        .glassButton()
+        .padding()
+    }
+}
+#endif

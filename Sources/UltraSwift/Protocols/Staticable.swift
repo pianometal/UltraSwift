@@ -46,7 +46,6 @@ nonisolated public protocol Staticable:
 
 nonisolated public extension Staticable {
     
-    /// The stable identity of the conforming type, derived from itself.
-    ///  - Returns: The instance itself as its identity.
+    /// - Returns: The instance itself as its identity.
     var id: Self { self }
 }

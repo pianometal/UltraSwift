@@ -29,13 +29,13 @@ nonisolated public protocol Colorable {
     var color: Color { get }
 }
 
-#if DEBUG
+// MARK: - Preview
 
+#if DEBUG
 private struct Crayon: Nameable, Colorable {
     let name: String
     let color: Color
 }
-
 #Preview {
     let crayon = Crayon(name: "Blue", color: .blue)
     Label {

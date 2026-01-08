@@ -36,4 +36,20 @@ nonisolated public extension Bool {
     var color: Color {
         self ? .green : .red
     }
+    
+    /// An array of all valid `Bool` cases.
+    ///
+    /// - Authors: [@pianometal](https://github.com/pianometal)
+    static let allCases: [Bool] = [true, false]
 }
+
+// MARK: - Preview
+
+#if DEBUG
+#Preview {
+    List(Bool.allCases, id: \.self) { 
+        Label($0.name, systemImage: $0.icon)
+            .foregroundStyle($0.color)
+    }
+}
+#endif
