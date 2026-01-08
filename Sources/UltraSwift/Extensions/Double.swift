@@ -10,34 +10,6 @@ import Foundation
 
 nonisolated public extension Double {
     
-    /// Converts the double to an integer, with optional rounding behavior.
-    /// 
-    /// When `rounded` is `true` (the default), the value is rounded to the nearest
-    /// representable whole number using `Double.rounded()` before conversion.
-    /// When `rounded` is `false`, the value is truncated toward zero during conversion,
-    /// matching `Int(self)` semantics.
-    /// 
-    /// ## Examples
-    /// ```swift
-    /// Text(3.6.asInt()) // 4 (rounded)
-    /// Text(3.6.asInt(rounded: false)) // 3 (truncated)
-    /// Text(-3.6.asInt()) // -4 (rounded away from zero)
-    /// Text(-3.6.asInt(rounded: false)) // -3 (truncated toward zero)
-    ///```
-    ///
-    /// - Parameter rounded: Whether to round to the nearest integer before converting (`true` by default).
-    ///
-    /// - Returns: An `Int` representation of the value using the specified rounding behavior.
-    ///
-    /// - Authors: [@pianometal](https://github.com/pianometal)
-    func asInt(rounded: Bool = true) -> Int {
-        guard self.isValid else {
-            printOnDebug("Cannot convert NaN or infinite Double to Int")
-            return 0
-        }
-        return Int(rounded ? self.rounded() : self)
-    }
-    
     /// Returns the double value formatted as a localized percentage string.
     ///
     /// This method uses the system's current locale to apply appropriate percent
