@@ -27,7 +27,7 @@ nonisolated public extension ColorScheme {
     ///   - `"Dark"` for Dark Mode
     ///   - `"Light"` for Light Mode
     ///
-    /// - authors: [@pianometal](https://github.com/pianometal)
+    /// - Authors: [@pianometal](https://github.com/pianometal)
     var name: String { isDark ? "Dark" : "Light" }
     
     /// SF Symbol representing the current `ColorScheme`.
@@ -42,7 +42,7 @@ nonisolated public extension ColorScheme {
     /// `Color` associated with the current `ColorScheme`.
     ///
     /// - Returns:
-    ///   - `.purple` for Dark Mode
+    ///   - `.indigo` for Dark Mode
     ///   - `.orange` for Light Mode
     ///
     /// - Authors: [@pianometal](https://github.com/pianometal)
