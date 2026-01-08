@@ -27,7 +27,7 @@ nonisolated public extension Edge {
     
     /// Converts an `Edge` to its corresponding `HorizontalEdge` if applicable.
     ///
-    /// - Returns: A `HorizontalEdge` instance corresponding to the `Edge`. or `nil` if not horizontal.
+    /// - Returns: A `HorizontalEdge` instance corresponding to the `Edge`, or `nil` if not horizontal.
     ///
     /// - Authors: [@pianometal](https://github.com/pianometal)
     func horizontal() -> HorizontalEdge? {

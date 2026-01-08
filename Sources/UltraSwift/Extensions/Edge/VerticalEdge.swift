@@ -24,7 +24,7 @@ nonisolated public extension Edge {
     
     /// Converts an `Edge` to its corresponding `VerticalEdge` if applicable.
     ///
-    /// - Returns: A `VerticalEdge` instance corresponding to the `Edge`. or `nil` if not vertical.
+    /// - Returns: A `VerticalEdge` instance corresponding to the `Edge`, or `nil` if not vertical.
     func vertical() -> VerticalEdge? {
         switch self {
         case .top: .top
