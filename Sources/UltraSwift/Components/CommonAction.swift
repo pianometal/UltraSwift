@@ -11,7 +11,7 @@ import SwiftUI
 /// A set of common, reusable actions that standardize action representations across app development.
 ///
 /// Each action provides a localized name and a corresponding SF Symbol icon name.
-///   
+///
 /// - Authors: [@pianometal](https://github.com/pianometal)
 nonisolated public enum CommonAction: String, Staticable, Searchable, Iconable {
     

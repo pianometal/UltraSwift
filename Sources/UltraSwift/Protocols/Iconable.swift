@@ -27,13 +27,13 @@ nonisolated public protocol Iconable {
     var icon: String { get }
 }
 
-#if DEBUG
+// MARK: - Preview
 
+#if DEBUG
 private struct MyLabel: Nameable, Iconable {
     let name = "Shield"
     let icon = "shield.fill"
 }
-
 #Preview {
     let label = MyLabel()
     Label(label.name, systemImage: label.icon)

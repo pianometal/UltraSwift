@@ -29,13 +29,13 @@ nonisolated public protocol Describable {
     var details: String { get }
 }
 
-#if DEBUG
+// MARK: - Preview
 
+#if DEBUG
 private struct Magazine: Nameable, Describable {
     let name = "Nintendo Power"
     let details = "Now you're playing with power!"
 }
-
 #Preview {
     let magazine = Magazine()
     LabeledContent { EmptyView() } label: {

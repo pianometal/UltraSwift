@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-public extension AccessibilityAdjustmentDirection {
+nonisolated public extension AccessibilityAdjustmentDirection {
     
     /// - Returns: A detailed description of the adjustment direction.
     ///
@@ -43,7 +43,7 @@ public extension AccessibilityAdjustmentDirection {
         }
     }
     
-    /// - Returns: A localized-ready string representing the adjustment direction.
+    /// - Returns: String representing the adjustment direction.
     ///
     /// - Authors: [@pianometal](https://github.com/pianometal)
     var name: String {
@@ -53,4 +53,28 @@ public extension AccessibilityAdjustmentDirection {
         @unknown default: "Unknown"
         }
     }
+    
+    /// - Returns: An array of all valid `AccessibilityAdjustmentDirection` cases.
+    ///
+    /// - Authors: [@pianometal](https://github.com/pianometal)
+    static let allCases: [AccessibilityAdjustmentDirection] = [
+        .increment,
+        .decrement
+    ]
 }
+
+// MARK: - Preview
+
+#if DEBUG
+#Preview {
+    List(AccessibilityAdjustmentDirection.allCases, id: \.self) { direction in
+        Label {
+            Text(direction.name)
+            Text(direction.details)
+        } icon: {
+            Image(systemName: direction.icon)
+                .foregroundColor(direction.color)
+        }
+    }
+}
+#endif
