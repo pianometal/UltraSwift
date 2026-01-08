@@ -23,7 +23,7 @@ nonisolated public extension Font.Design {
         }
     }
     
-    /// - Returns: An array of all standard `Font.Design` cases, sorted by name
+    /// - Returns: An array of all standard `Font.Design` cases.
     ///
     /// - Authors: [@pianometal](https://github.com/pianometal)
     static let allCases: [Font.Design] = [
