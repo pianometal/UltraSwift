@@ -3,6 +3,7 @@
 //  UltraSwift
 //
 //  Created by Kyle Lovely on 1/8/26.
+//  MIT License
 //
 
 import SwiftUI
