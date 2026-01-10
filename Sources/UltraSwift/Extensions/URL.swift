@@ -6,7 +6,7 @@
 //  MIT License
 //
 
-import SwiftUI
+import Foundation
 
 nonisolated public extension URL {
     

@@ -16,6 +16,8 @@ public extension String {
     /// information in the terminal if the URL creation fails.
     ///
     /// - Returns: A `URL` created from the string, or `nil` if the string is not a valid URL.
+    ///
+    /// - Authors: [@pianometal](https://github.com/pianometal)
     var toURL: URL? {
         URL.create(self)
     }
