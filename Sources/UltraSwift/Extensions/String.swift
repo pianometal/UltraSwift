@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-public extension String {
+nonisolated public extension String {
     
     /// Converts the string into a URL using UltraSwift's `URL.create(_:)`.
     ///
