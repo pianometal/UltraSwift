@@ -24,6 +24,8 @@ nonisolated public extension URL {
     ///
     /// - Note: This function is intended for network/remote URLs. It will reject URLs without a host
     ///         (e.g., file URLs or custom schemes without hosts).
+    ///
+    /// - Authors: [@pianometal](https://github.com/pianometal)
     static func create(_ string: String) -> URL? {
         guard let url = URL(string: string) else {
             printOnDebug("⚠️ Unable to create URL from: \(string)")

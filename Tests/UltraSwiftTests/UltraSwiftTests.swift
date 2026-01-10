@@ -2,6 +2,8 @@ import Testing
 import SwiftUI
 @testable import UltraSwift
 
+// MARK: - Edge
+
 /// Tests for UltraSwift Edge opposite extension.
 ///
 /// - Authors: [@pianometal](https://github.com/pianometal)
@@ -30,4 +32,41 @@ import SwiftUI
     #expect(Edge.bottom.toEdge(.vertical) == .bottom)
     #expect(Edge.leading.toEdge(.vertical) == nil)
     #expect(Edge.trailing.toEdge(.vertical) == nil)
+}
+
+// MARK: - URL
+
+/// Tests for UltraSwift URL create extension.
+///
+/// - Authors: [@pianometal](https://github.com/pianometal)
+@Test func testURLCreateValid() async throws {
+    #expect(URL.create("https://www.apple.com")?.host == "www.apple.com")
+    #expect(URL.create("http://apple.com")?.host == "apple.com")
+}
+
+/// Tests for UltraSwift URL create extension with invalid strings.
+///
+/// - Authors: [@pianometal](https://github.com/pianometal)
+@Test func testURLCreateInvalidString() async throws {
+    #expect(URL.create("not a url") == nil)
+    #expect(URL.create("") == nil)
+    #expect(URL.create("ht!tp://bad_url") == nil)
+}
+
+/// Tests for UltraSwift URL create extension with no host.
+///
+/// - Authors: [@pianometal](https://github.com/pianometal)
+@Test func testURLCreateNoHost() async throws {
+    #expect(URL.create("file:///Users/test/file.txt") == nil)
+    #expect(URL.create("customscheme://") == nil)
+    #expect(URL.create("mailto:user@example.com") == nil)
+}
+
+/// Tests for UltraSwift URL create extension with edge cases.
+///
+/// - Authors: [@pianometal](https://github.com/pianometal)
+@Test func testURLCreateHostEdgeCases() async throws {
+    #expect(URL.create("https://") == nil)
+    #expect(URL.create("https://?query=param") == nil)
+    #expect(URL.create("https://#fragment") == nil)
 }
