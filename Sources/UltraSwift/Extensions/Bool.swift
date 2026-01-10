@@ -43,7 +43,8 @@ nonisolated public extension Bool {
     /// This helper is intended to provide a quick, styled label for true/false states
     ///
     /// - Returns: A SwiftUI `Label`  that displays a `Label` composed
-    /// of `name` and `icon`, tinted with `color` based on the given value.
+    ///            of `name` and `icon`, tinted with `color` based on the
+    ///            given value.
     ///
     /// - Authors: [@pianometal](https://github.com/pianometal)
     @MainActor func labelView() -> some View {
