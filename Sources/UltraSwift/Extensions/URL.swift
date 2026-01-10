@@ -31,7 +31,7 @@ nonisolated public extension URL {
             printOnDebug("⚠️ Unable to create URL from: \(string)")
             return nil
         }
-        guard let host = url.host, !host.isEmpty else {
+        guard let host = url.host(), !host.isEmpty else {
             printOnDebug("⚠️ Unable to contact host from: \(url.debugDescription)")
             return nil
         }
