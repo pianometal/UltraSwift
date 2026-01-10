@@ -20,7 +20,7 @@ nonisolated public extension URL {
     ///
     /// - Parameter string: The raw string to convert into a `URL`.
     ///
-    /// - Returns: A `URL` if the string forms a valid URL with a non-empty host; otherwise, `nil`.
+    /// - Returns: A `URL` whose host is non-empty, or `nil` if validation fails.
     ///
     /// - Note: This function is intended for network/remote URLs. It will reject URLs without a host
     ///         (e.g., file URLs or custom schemes without hosts).
