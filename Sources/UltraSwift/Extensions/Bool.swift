@@ -37,6 +37,21 @@ nonisolated public extension Bool {
         self ? .green : .red
     }
     
+    /// Creates a view representing this boolean value using a name,
+    /// system image, and color.
+    ///
+    /// This helper is intended to provide a quick, styled label for true/false states
+    ///
+    /// - Returns: A SwiftUI `Label`  that displays a `Label` composed
+    ///            of `name` and `icon`, tinted with `color` based on the
+    ///            given value.
+    ///
+    /// - Authors: [@pianometal](https://github.com/pianometal)
+    @MainActor func labelView() -> some View {
+        Label(name, systemImage: icon)
+            .foregroundStyle(color)
+    }
+    
     /// An array of all valid `Bool` cases.
     ///
     /// - Authors: [@pianometal](https://github.com/pianometal)
