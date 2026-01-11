@@ -28,7 +28,7 @@ nonisolated public extension String {
     NavigationStack {
         List {
             LabeledContent {
-                if let valid = "https://www.apple.com".toURL {
+                if "https://www.apple.com".toURL != nil {
                     true.labelView()
                 } else {
                     false.labelView()
@@ -39,7 +39,7 @@ nonisolated public extension String {
             }
             
             LabeledContent {
-                if let blank = "".toURL {
+                if "".toURL != nil {
                     false.labelView()
                 } else {
                     true.labelView()
@@ -50,7 +50,7 @@ nonisolated public extension String {
             }
             
             LabeledContent {
-                if let whitespace = "   ".toURL {
+                if "   ".toURL != nil {
                     false.labelView()
                 } else {
                     true.labelView()
@@ -60,7 +60,7 @@ nonisolated public extension String {
                 Text("Testing with a string of spaces")
             }
             LabeledContent {
-                if let invalid = "ht!tp://invalid-url".toURL {
+                if "ht!tp://invalid-url".toURL != nil {
                     false.labelView()
                 } else {
                     true.labelView()
