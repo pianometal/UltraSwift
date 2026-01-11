@@ -63,4 +63,19 @@ public extension View {
         self
 #endif
     }
+    
+    /// Applies an appropriate `PickerStyle` to the view, preferring a segmented control where supported.
+    ///
+    /// - Returns: A view that applies a platform-appropriate picker style.
+    ///   - `.automatic` on watchOS
+    ///   - `.segmented` on all other platforms
+    ///
+    /// - Authors: [@pianometal](https://github.com/pianometal)
+    @ViewBuilder func segmentedPicker() -> some View {
+#if !os(watchOS)
+        pickerStyle(.segmented)
+#else
+        pickerStyle(.automatic)
+#endif
+    }
 }
