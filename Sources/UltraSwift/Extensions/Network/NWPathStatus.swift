@@ -6,8 +6,8 @@
 //  MIT License
 //
 
-import SwiftUI
 import Network
+import SwiftUI
 
 nonisolated public extension NWPath.Status {
     
