@@ -71,7 +71,7 @@ nonisolated public extension NWPath.Status {
     /// - Returns: An array of all standard `NWPath.Status` cases.
     ///
     /// - Authors: [@pianometal](https://github.com/pianometal)
-    static let allCases : [NWPath.Status] = [
+    static let allCases: [NWPath.Status] = [
         .satisfied,
         .unsatisfied,
         .requiresConnection
