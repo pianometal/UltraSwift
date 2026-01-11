@@ -65,7 +65,7 @@ public extension UIDevice.BatteryState {
 #if DEBUG
 #Preview {
     NavigationStack {
-        List(UIDevice.BatteryState.allCases, id: \.self) { state in
+        List(UIDevice.BatteryState.allCases, id: \.rawValue) { state in
             LabeledContent {
                 EmptyView()
             } label: {
