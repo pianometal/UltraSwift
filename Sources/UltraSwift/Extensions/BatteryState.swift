@@ -1,6 +1,6 @@
 //
 //  BatteryState.swift
-//  SystemCheckData
+//  UltraSwift
 //
 //  Created by Kyle Lovely on 1/11/26.
 //  MIT License
@@ -10,7 +10,7 @@
 
 import SwiftUI
 
-public extension UIDevice.BatteryState {
+nonisolated public extension UIDevice.BatteryState {
     
     /// - Returns: A detailed description of the battery state.
     ///
