@@ -27,7 +27,7 @@ public enum Formatters {
     /// let sizeInBytes: Int64 = 5_242_880 // 5 MB
     /// let text = Formatters.byteCount.string(fromByteCount: sizeInBytes) // "5 MB" (locale dependent)
     /// ```
-    static let byteCount: ByteCountFormatter = {
+    public static let byteCount: ByteCountFormatter = {
         let formatter = ByteCountFormatter()
         formatter.allowedUnits = .useAll
         formatter.countStyle = .memory
