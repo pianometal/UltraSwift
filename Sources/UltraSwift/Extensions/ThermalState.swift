@@ -1,6 +1,6 @@
 //
 //  ThermalState.swift
-//  SystemCheckData
+//  UltraSwift
 //
 //  Created by Kyle Lovely on 1/11/26.
 //  MIT License
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-public extension ProcessInfo.ThermalState {
+nonisolated public extension ProcessInfo.ThermalState {
     
     /// - Returns: A color representing the severity of the `ThermalState`.
     ///
