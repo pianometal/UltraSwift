@@ -6,7 +6,7 @@
 //  MIT License
 //
 
-import SwiftUI
+import Foundation
 
 /// A protocol for types that have an associated SF Symbol icon.
 ///
@@ -30,6 +30,7 @@ nonisolated public protocol Iconable {
 // MARK: - Preview
 
 #if DEBUG
+import SwiftUI
 private struct MyLabel: Nameable, Iconable {
     let name = "Shield"
     let icon = "shield.fill"

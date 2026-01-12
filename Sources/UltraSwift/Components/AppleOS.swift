@@ -6,7 +6,7 @@
 //  MIT License
 //
 
-import SwiftUI
+import Foundation
 
 /// Enumeration of Apple operating systems.
 ///
@@ -74,6 +74,7 @@ nonisolated public enum AppleOS: String, Staticable, Searchable, Iconable, Descr
 // MARK: - Preview
 
 #if DEBUG
+import SwiftUI
 #Preview {
     List {
         ForEach(AppleOS.allCases) { os in

@@ -6,7 +6,7 @@
 //  MIT License
 //
 
-import SwiftUI
+import Foundation
 
 /// A lightweight protocol for types that can provide a human‑readable description of themselves,
 ///
@@ -32,6 +32,7 @@ nonisolated public protocol Describable {
 // MARK: - Preview
 
 #if DEBUG
+import SwiftUI
 private struct Magazine: Nameable, Describable {
     let name = "Nintendo Power"
     let details = "Now you're playing with power!"

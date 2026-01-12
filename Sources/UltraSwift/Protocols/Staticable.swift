@@ -6,7 +6,7 @@
 //  MIT License
 //
 
-import SwiftUI
+import Foundation
 
 /// A convenience protocol that unifies common static, value-like requirements for types,
 /// especially string-backed enumerations intended to be safely shared across concurrency domains.
@@ -73,6 +73,7 @@ nonisolated public extension Staticable {
 }
 
 #if DEBUG
+import SwiftUI
 private enum DemoObject: String, Staticable {
     case first, second, third
 }

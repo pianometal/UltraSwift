@@ -6,7 +6,7 @@
 //  MIT License
 //
 
-import SwiftUI
+import Foundation
 
 nonisolated public extension URL {
     
@@ -55,6 +55,7 @@ nonisolated public extension String {
 }
 
 #if DEBUG
+import SwiftUI
 #Preview {
     NavigationStack {
         List {
