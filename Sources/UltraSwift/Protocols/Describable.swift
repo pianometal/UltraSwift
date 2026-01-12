@@ -21,7 +21,7 @@ import SwiftUI
 ///     let details = "Now you're playing with power!"
 /// }
 /// ```
-/// 
+///
 /// - Authors: [@pianometal](https://github.com/pianometal)
 nonisolated public protocol Describable {
     

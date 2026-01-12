@@ -51,6 +51,8 @@ nonisolated public extension Color {
     }
 }
 
+// MARK: - Preview
+
 #if DEBUG
 #Preview {
     NavigationStack {

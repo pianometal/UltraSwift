@@ -18,12 +18,12 @@ import Foundation
 /// let person = Person(name: "Ada")
 /// Text(person.name)
 /// ```
-/// 
+///
 /// - Authors: [@pianometal](https://github.com/pianometal)
 nonisolated public protocol Nameable {
-
+    
     /// - Returns: A human‑readable name identifying the conforming type.
-     var name: String { get }
+    var name: String { get }
 }
 
 nonisolated public extension Nameable {
@@ -38,7 +38,7 @@ nonisolated public extension Nameable {
     /// - Parameters:
     ///   - lhs: A `Nameable` value to compare for ordering.
     ///   - rhs: Another `Nameable` value to compare to `lhs`.
-    ///   
+    ///
     /// - Returns: `true` if `lhs.name` is lexicographically less than `rhs.name`;
     ///   otherwise, `false`.
     ///
@@ -56,9 +56,9 @@ nonisolated public extension Collection where Element: Nameable {
     /// case‑insensitive, locale‑aware comparison.
     ///
     /// /// The search checks if each element’s `name` contains the provided `text`.
-    /// `@inlineable` is used to suggest to the compiler that it should inline this function. This
-    /// can improve performance by eliminating the function call overhead, especially in
-    /// performance-critical code paths or tight loops.
+    /// `@inlineable` is used to suggest to the compiler that it is allowed to inline this
+    /// function. This can improve performance by eliminating the function call
+    /// overhead, especially in performance-critical code paths or tight loops.
     ///
     /// If `text` is empty, all elements are returned.
     ///

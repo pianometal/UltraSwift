@@ -92,6 +92,8 @@ nonisolated public extension ProcessInfo.ThermalState {
     ]
 }
 
+// MARK: - Preview
+
 #if DEBUG
 #Preview {
     NavigationStack {

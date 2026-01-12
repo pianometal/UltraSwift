@@ -66,6 +66,8 @@ nonisolated public extension GridItem {
     }
 }
 
+// MARK: - Preview
+
 #if DEBUG
 #Preview {
     @Previewable @Environment(\.horizontalSizeClass) var horizontalSizeClass

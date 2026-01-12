@@ -64,7 +64,7 @@ nonisolated public extension Staticable {
     ///
     /// - Authors: [@pianometal](https://github.com/pianometal)
     var customizationID: String {
-        guard let bundleIdentifier = Bundle.main.bundleIdentifier else {
+        guard let bundleIdentifier = MainBundle.identifier else {
             printOnDebug("⚠️ Bundle identifier is nil. Using \(rawValue) for tabViewCustomizationID.")
             return rawValue
         }
