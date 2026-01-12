@@ -41,7 +41,7 @@ nonisolated public enum MainBundle {
     ///   info dictionary cannot be accessed.
     ///
     /// - Authors: [@pianometal](https://github.com/pianometal)
-    static var infoDictionary: [String : Any]? {
+    public static var infoDictionary: [String : Any]? {
         guard let infoDictionary = Bundle.main.infoDictionary else {
             printOnDebug("⚠️ Bundle infoDictionary is nil")
             return nil
@@ -59,7 +59,7 @@ nonisolated public enum MainBundle {
     /// - Returns: The string value for the key if it exists and is a `String`; otherwise, `nil`.
     ///
     /// - Authors: [@pianometal](https://github.com/pianometal)
-    static func infoDictionary(_ key: String) -> String? {
+    public static func infoDictionary(_ key: String) -> String? {
         guard let value = infoDictionary?[key] as? String else {
             printOnDebug("⚠️ Unable to find \(key) in Info.plist")
             return nil
