@@ -58,7 +58,7 @@ nonisolated public extension Staticable {
     /// - Use as a persistent identifier when registering or restoring tab configurations.
     /// - Helpful for analytics or state restoration keys that must remain stable across launches.
     ///
-    /// - Returns::
+    /// - Returns:
     ///   - If `Bundle.main.bundleIdentifier` is available, returns "<bundleID>.<rawValue>".
     ///   - If the bundle identifier is unavailable, logs a debug warning and returns `rawValue`.
     ///
@@ -68,7 +68,7 @@ nonisolated public extension Staticable {
             printOnDebug("⚠️ Bundle identifier is nil. Using \(rawValue) for tabViewCustomizationID.")
             return rawValue
         }
-        return"\(bundleIdentifier).\(rawValue)"
+        return "\(bundleIdentifier).\(rawValue)"
     }
 }
 
