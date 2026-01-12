@@ -62,6 +62,8 @@ nonisolated public extension UIDevice.BatteryState {
     ]
 }
 
+// MARK: - Preview
+
 #if DEBUG
 #Preview {
     NavigationStack {

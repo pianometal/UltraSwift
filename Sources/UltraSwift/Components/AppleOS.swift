@@ -6,7 +6,7 @@
 //  MIT License
 //
 
-import SwiftUI
+import Foundation
 
 /// Enumeration of Apple operating systems.
 ///
@@ -55,25 +55,26 @@ nonisolated public enum AppleOS: String, Staticable, Searchable, Iconable, Descr
     ///
     /// - Returns: `true` if the platform corresponds to the current operating system.
     public var isCurrent: Bool {
-        #if os(iOS)
+#if os(iOS)
         self == .iOS || self == .iPadOS
-        #elseif os(macOS)
+#elseif os(macOS)
         self == .macOS
-        #elseif os(tvOS)
+#elseif os(tvOS)
         self == .tvOS
-        #elseif os(watchOS)
+#elseif os(watchOS)
         self == .watchOS
-        #elseif os(visionOS)
+#elseif os(visionOS)
         self == .visionOS
-        #else
+#else
         false
-        #endif
+#endif
     }
 }
 
 // MARK: - Preview
 
 #if DEBUG
+import SwiftUI
 #Preview {
     List {
         ForEach(AppleOS.allCases) { os in
