@@ -22,7 +22,8 @@ let package = Package(
         .target(
             name: name,
             swiftSettings: [
-                .defaultIsolation(MainActor.self),
+                .defaultIsolation(nil),
+                .enableUpcomingFeature("StrictConcurrency"),
                 .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
                 .enableUpcomingFeature("InferIsolatedConformances")
             ]
@@ -31,5 +32,8 @@ let package = Package(
             name: "UltraSwiftTests",
             dependencies: ["UltraSwift"]
         ),
-    ]
+    ],
+    swiftLanguageModes: [
+        .v6
+    ],
 )
