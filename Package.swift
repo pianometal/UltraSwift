@@ -30,7 +30,13 @@ let package = Package(
         ),
         .testTarget(
             name: "UltraSwiftTests",
-            dependencies: ["UltraSwift"]
+            dependencies: ["UltraSwift"],
+            swiftSettings: [
+                .defaultIsolation(nil),
+                .enableUpcomingFeature("StrictConcurrency"),
+                .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
+                .enableUpcomingFeature("InferIsolatedConformances")
+            ]
         ),
     ],
     swiftLanguageModes: [
