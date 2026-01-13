@@ -22,14 +22,24 @@ let package = Package(
         .target(
             name: name,
             swiftSettings: [
-                .defaultIsolation(MainActor.self),
+                .defaultIsolation(nil),
+                .enableUpcomingFeature("StrictConcurrency"),
                 .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
-                .enableUpcomingFeature("InferIsolatedConformances")
+                .enableUpcomingFeature("InferIsolatedConformances"),
             ]
         ),
         .testTarget(
             name: "UltraSwiftTests",
-            dependencies: ["UltraSwift"]
+            dependencies: ["UltraSwift"],
+            swiftSettings: [
+                .defaultIsolation(nil),
+                .enableUpcomingFeature("StrictConcurrency"),
+                .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
+                .enableUpcomingFeature("InferIsolatedConformances"),
+            ]
         ),
-    ]
+    ],
+    swiftLanguageModes: [
+        .v6
+    ],
 )
