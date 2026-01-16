@@ -6,7 +6,7 @@
 //  MIT License
 //
 
-#if !os(macOS) && !os(tvOS) && !os(watchOS)
+#if os(iOS) || os(visionOS)
 
 import SwiftUI
 

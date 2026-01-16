@@ -52,7 +52,7 @@ nonisolated public extension WKInterfaceDeviceBatteryState {
         }
     }
     
-    /// - Returns: An array of all standard `UIDevice.BatteryState` cases.
+    /// - Returns: An array of all standard `WKInterfaceDeviceBatteryState` cases.
     ///
     /// - Authors: [@pianometal](https://github.com/pianometal)
     static let allCases: [Self] = [
@@ -62,4 +62,27 @@ nonisolated public extension WKInterfaceDeviceBatteryState {
         .unknown
     ]
 }
+
+// MARK: - Preview
+
+#if DEBUG
+#Preview {
+    NavigationStack {
+        List(WKInterfaceDeviceBatteryState.allCases, id: \.rawValue) { state in
+            HStack {
+                Image(systemName: state.icon)
+                    .symbolRenderingMode(.multicolor)
+                VStack(alignment: .leading) {
+                    Text(state.name)
+                        .bold()
+                    Text(state.details)
+                        .font(.caption2)
+                        .foregroundStyle(.gray)
+                }
+            }
+        }
+        .navigationTitle("Battery States")
+    }
+}
+#endif
 #endif
