@@ -1,0 +1,65 @@
+//
+//  WKInterfaceDeviceBatteryState.swift
+//  UltraSwift
+//
+//  Created by Kyle Lovely on 1/16/26.
+//  MIT License
+//
+
+#if os(watchOS)
+
+import WatchKit
+import SwiftUI
+
+nonisolated public extension WKInterfaceDeviceBatteryState {
+    
+    /// - Returns: A detailed description of the battery state.
+    ///
+    /// - Authors: [@pianometal](https://github.com/pianometal)
+    var details: String {
+        switch self {
+        case .full:       "The battery is fully charged."
+        case .charging:   "The battery is currently being charged."
+        case .unplugged:  "The device is running on battery power."
+        case .unknown:    "The battery state is unknown."
+        @unknown default: "The battery state cannot be determined."
+        }
+    }
+    
+    /// - Returns: An SF Symbol name suitable for use with `Image(systemName:)`.
+    ///
+    /// - Authors: [@pianometal](https://github.com/pianometal)
+    var icon: String {
+        switch self {
+        case .unknown:    "questionmark"
+        case .unplugged:  "powerplug.fill"
+        case .charging:   "battery.100percent.bolt"
+        case .full:       "battery.100percent"
+        @unknown default: "exclamationmark.triangle"
+        }
+    }
+    
+    /// - Returns: The name of the battery state.
+    ///
+    /// - Authors: [@pianometal](https://github.com/pianometal)
+    var name: String {
+        switch self {
+        case .full:       "Full"
+        case .charging:   "Charging"
+        case .unplugged:  "Unplugged"
+        case .unknown:    "Unknown"
+        @unknown default: "Undefined"
+        }
+    }
+    
+    /// - Returns: An array of all standard `UIDevice.BatteryState` cases.
+    ///
+    /// - Authors: [@pianometal](https://github.com/pianometal)
+    static let allCases: [Self] = [
+        .full,
+        .charging,
+        .unplugged,
+        .unknown
+    ]
+}
+#endif
