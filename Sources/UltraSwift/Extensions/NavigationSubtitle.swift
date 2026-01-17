@@ -18,10 +18,11 @@ public extension View {
     ///
     /// ## Example
     ///   ```swift
+    ///   // Compiles on all platforms, but subtitle only appears on iOS and macOS
     ///   NavigationStack {
     ///       ApplesView()
     ///           .navigationTitle("My Apples")
-    ///           .navigationSubtitle(string: "A list of my favorite apples")
+    ///           .navigationSubtitle(subtitle: "A list of my favorite apples")
     ///   }
     ///   ```
     ///
