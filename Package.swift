@@ -21,25 +21,23 @@ let package = Package(
     targets: [
         .target(
             name: name,
-            swiftSettings: [
-                .defaultIsolation(nil),
-                .enableUpcomingFeature("StrictConcurrency"),
-                .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
-                .enableUpcomingFeature("InferIsolatedConformances"),
-            ]
+            swiftSettings: swiftSettings
         ),
         .testTarget(
             name: "UltraSwiftTests",
             dependencies: ["UltraSwift"],
-            swiftSettings: [
-                .defaultIsolation(nil),
-                .enableUpcomingFeature("StrictConcurrency"),
-                .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
-                .enableUpcomingFeature("InferIsolatedConformances"),
-            ]
+            swiftSettings: swiftSettings
         ),
     ],
     swiftLanguageModes: [
         .v6
     ],
 )
+
+/// - Returns: An array of Swift settings for the package targets.
+private let swiftSettings: [SwiftSetting] = [
+    .defaultIsolation(nil),
+    .enableUpcomingFeature("StrictConcurrency"),
+    .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
+    .enableUpcomingFeature("InferIsolatedConformances"),
+]

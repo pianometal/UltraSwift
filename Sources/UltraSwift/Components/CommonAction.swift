@@ -70,6 +70,8 @@ nonisolated public enum CommonAction: String, Staticable, Searchable, Iconable {
     }
 }
 
+// MARK: - Preview
+
 #if DEBUG
 #Preview {
     List {
