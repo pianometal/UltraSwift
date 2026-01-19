@@ -35,8 +35,8 @@ import SwiftUI
 /// ```
 ///
 /// - Authors: [@pianometal](https://github.com/pianometal)
-@MainActor public protocol Imageable {
+nonisolated public protocol Imageable {
     
     /// - Returns: An `ImageResource` representing the conforming type.
-    var image: ImageResource { get }
+    @MainActor var image: ImageResource { get }
 }
