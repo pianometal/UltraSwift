@@ -38,5 +38,5 @@ import SwiftUI
 public protocol Imageable {
     
     /// - Returns: An `ImageResource` representing the conforming type.
-    var image: ImageResource { get }
+    @MainActor var image: ImageResource { get }
 }
