@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-nonisolated public extension Font.Design {
+public extension Font.Design {
     
     /// - Returns: String representation of the font design.
     ///

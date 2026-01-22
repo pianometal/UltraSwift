@@ -8,7 +8,7 @@
 
 import Foundation
 
-nonisolated public extension Double {
+public extension Double {
     
     /// Returns the double value formatted as a localized percentage string.
     ///

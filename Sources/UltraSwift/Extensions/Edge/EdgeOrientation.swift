@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-nonisolated public extension Edge {
+public extension Edge {
     
     /// Defines two primary orientations for `Edge` values.
     ///

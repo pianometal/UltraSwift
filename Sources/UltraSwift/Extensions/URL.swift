@@ -8,7 +8,7 @@
 
 import Foundation
 
-nonisolated public extension URL {
+public extension URL {
     
     /// Attempts to construct a valid, contactable URL from the provided string.
     ///
@@ -39,7 +39,7 @@ nonisolated public extension URL {
     }
 }
 
-nonisolated public extension String {
+public extension String {
     
     /// Converts the string into a URL using UltraSwift's `URL.create(_:)`.
     ///

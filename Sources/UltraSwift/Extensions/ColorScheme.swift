@@ -10,7 +10,7 @@ import SwiftUI
 
 // MARK: - ColorScheme
 
-nonisolated public extension ColorScheme {
+public extension ColorScheme {
     
     /// Indicates whether the current `ColorScheme` is Dark Mode.
     ///
@@ -49,7 +49,7 @@ nonisolated public extension ColorScheme {
     var color: Color { isDark ? .indigo : .orange }
 }
 
-nonisolated public extension ColorScheme? {
+public extension ColorScheme? {
     
     /// - SeeAlso: `ColorScheme.isDark`
     ///

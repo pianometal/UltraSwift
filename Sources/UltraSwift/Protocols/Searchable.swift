@@ -20,4 +20,8 @@ import Foundation
 ///   - `Comparable`: Allows consistent sorting of search results.
 ///
 /// - Authors: [@pianometal](https://github.com/pianometal)
-public typealias Searchable = Nameable & Identifiable & Hashable & Comparable
+public protocol Searchable:
+    Nameable,
+    Identifiable,
+    Hashable,
+    Comparable { }

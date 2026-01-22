@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-nonisolated public extension VerticalEdge {
+public extension VerticalEdge {
     
     /// Converts a `VerticalEdge` to its corresponding `Edge`.
     /// - Returns: An `Edge` instance corresponding to the `VerticalEdge`.
@@ -20,7 +20,7 @@ nonisolated public extension VerticalEdge {
     }
 }
 
-nonisolated public extension Edge {
+public extension Edge {
     
     /// Converts an `Edge` to its corresponding `VerticalEdge` if applicable.
     ///

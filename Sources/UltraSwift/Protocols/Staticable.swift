@@ -34,7 +34,7 @@ import Foundation
 ///   - `RawRepresentable` with a `String` raw value, enabling ergonomic serialization and display.
 ///
 /// - Authors: [@pianometal](https://github.com/pianometal)
-nonisolated public protocol Staticable:
+public protocol Staticable:
     Identifiable,
     Codable,
     CaseIterable,
@@ -44,7 +44,7 @@ nonisolated public protocol Staticable:
     Equatable,
     RawRepresentable where RawValue == String { }
 
-nonisolated public extension Staticable {
+public extension Staticable {
     
     /// - Returns: The instance itself as its identity.
     var id: Self { self }

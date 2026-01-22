@@ -23,7 +23,7 @@ import Foundation
 /// - Note: In non-DEBUG builds, this function does nothing and produces no output.
 ///
 /// - Authors: [@pianometal](https://github.com/pianometal)
-nonisolated public func printOnDebug(_ items: Any..., separator: String = " ", terminator: String = "\n") {
+public func printOnDebug(_ items: Any..., separator: String = " ", terminator: String = "\n") {
 #if DEBUG
     print(items, separator: separator, terminator: terminator)
 #endif

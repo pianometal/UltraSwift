@@ -10,7 +10,7 @@
 
 import SwiftUI
 
-nonisolated public extension UIDevice.BatteryState {
+public extension UIDevice.BatteryState {
     
     /// - Returns: A detailed description of the battery state.
     ///

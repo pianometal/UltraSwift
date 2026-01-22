@@ -9,7 +9,7 @@
 import Network
 import SwiftUI
 
-nonisolated public extension NWPath.UnsatisfiedReason {
+public extension NWPath.UnsatisfiedReason {
     
     /// - Returns: A detailed description of the unsatisfied reason.
     ///

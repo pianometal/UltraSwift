@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-nonisolated public extension ProcessInfo.ThermalState {
+public extension ProcessInfo.ThermalState {
     
     /// - Returns: A color representing the severity of the `ThermalState`.
     ///

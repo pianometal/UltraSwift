@@ -13,7 +13,7 @@ import SwiftUI
 /// Each action provides a localized name and a corresponding SF Symbol icon name.
 ///
 /// - Authors: [@pianometal](https://github.com/pianometal)
-nonisolated public enum CommonAction: String, Staticable, Searchable, Iconable {
+public enum CommonAction: String, Staticable, Searchable, Iconable {
     
     case add
     case cancel

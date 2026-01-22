@@ -21,7 +21,7 @@ import Foundation
 /// - PreCondition: The SF Symbol name provided by the `icon` property must be valid and available for the specified target.
 /// 
 /// - Authors: [@pianometal](https://github.com/pianometal)
-nonisolated public protocol Iconable {
+public protocol Iconable {
     
     /// - Returns: SF Symbol name suitable for use with `Image(systemName:)`.
     var icon: String { get }

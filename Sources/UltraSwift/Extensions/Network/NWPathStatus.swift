@@ -9,7 +9,7 @@
 import Network
 import SwiftUI
 
-nonisolated public extension NWPath.Status {
+public extension NWPath.Status {
     
     /// - Returns: A color representing the network status.
     ///

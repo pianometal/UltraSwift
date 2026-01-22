@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-nonisolated public extension DynamicTypeSize {
+public extension DynamicTypeSize {
     
     /// - Returns: A descriptive `String` for the Dynamic Type Size.
     ///

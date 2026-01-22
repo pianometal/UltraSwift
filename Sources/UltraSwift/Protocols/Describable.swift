@@ -23,7 +23,7 @@ import Foundation
 /// ```
 ///
 /// - Authors: [@pianometal](https://github.com/pianometal)
-nonisolated public protocol Describable {
+public protocol Describable {
     
     /// - Returns: A human‑readable, user‑facing description or summary of the value.
     var details: String { get }

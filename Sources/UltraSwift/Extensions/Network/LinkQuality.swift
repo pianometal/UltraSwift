@@ -9,7 +9,7 @@
 import Network
 import SwiftUI
 
-nonisolated public extension NWPath.LinkQuality {
+public extension NWPath.LinkQuality {
     
     /// - Returns: A color representing the link quality.
     ///

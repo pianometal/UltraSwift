@@ -8,7 +8,7 @@
 
 import UniformTypeIdentifiers
 
-nonisolated public extension UTType {
+public extension UTType {
     
     /// A convenience Uniform Type Identifier (UTI) derived from the app’s bundle identifier.
     ///
@@ -32,7 +32,7 @@ nonisolated public extension UTType {
     ///   forced unwrap.
     ///
     /// - Authors: [@pianometal](https://github.com/pianometal)
-    static var generate: Self {
+    static var utType: Self {
         UTType(exportedAs: MainBundle.identifier!)
     }
 }

@@ -20,13 +20,13 @@ import Foundation
 /// ```
 ///
 /// - Authors: [@pianometal](https://github.com/pianometal)
-nonisolated public protocol Nameable {
+public protocol Nameable {
     
     /// - Returns: A human‑readable name identifying the conforming type.
     var name: String { get }
 }
 
-nonisolated public extension Nameable {
+public extension Nameable {
     
     /// Returns a Boolean value indicating whether the left-hand side value should be
     /// ordered before the right-hand side value by comparing their `name` properties.
@@ -50,7 +50,7 @@ nonisolated public extension Nameable {
     }
 }
 
-nonisolated public extension Collection where Element: Nameable {
+public extension Collection where Element: Nameable {
     
     /// Returns the elements whose `name` contains the given search text, using a
     /// case‑insensitive, locale‑aware comparison.
