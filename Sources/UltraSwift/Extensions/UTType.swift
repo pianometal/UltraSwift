@@ -32,7 +32,7 @@ public extension UTType {
     ///   forced unwrap.
     ///
     /// - Authors: [@pianometal](https://github.com/pianometal)
-    static var utType: Self {
+    static var fromBundle: Self {
         UTType(exportedAs: MainBundle.identifier!)
     }
 }
