@@ -31,7 +31,7 @@ let package = Package(
 
 /// - Returns: An array of Swift settings for the package targets.
 private let swiftSettings: [SwiftSetting] = [
-    .defaultIsolation(MainActor.self),
+    .defaultIsolation(nil),
     .enableUpcomingFeature("StrictConcurrency"),
     .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
     .enableUpcomingFeature("InferIsolatedConformances"),
