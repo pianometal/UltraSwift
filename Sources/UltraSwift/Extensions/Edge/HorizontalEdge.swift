@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-nonisolated public extension HorizontalEdge {
+public extension HorizontalEdge {
     
     /// Converts a `HorizontalEdge` to its corresponding `Edge`.
     ///
@@ -23,7 +23,7 @@ nonisolated public extension HorizontalEdge {
     }
 }
 
-nonisolated public extension Edge {
+public extension Edge {
     
     /// Converts an `Edge` to its corresponding `HorizontalEdge` if applicable.
     ///

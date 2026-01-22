@@ -11,7 +11,7 @@
 import WatchKit
 import SwiftUI
 
-nonisolated public extension WKInterfaceDeviceBatteryState {
+public extension WKInterfaceDeviceBatteryState {
     
     /// - Returns: A detailed description of the battery state.
     ///

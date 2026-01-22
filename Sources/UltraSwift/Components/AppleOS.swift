@@ -15,7 +15,7 @@ import Foundation
 /// an SF Symbols glyph identifier, and a canonical display name.
 ///
 /// - Authors: [@pianometal](https://github.com/pianometal)
-nonisolated public enum AppleOS: String, Staticable, Searchable, Iconable, Describable {
+public enum AppleOS: String, Staticable, Searchable, Iconable, Describable {
     
     case iOS
     case iPadOS

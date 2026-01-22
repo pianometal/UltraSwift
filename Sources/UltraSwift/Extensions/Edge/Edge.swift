@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-nonisolated public extension Edge {
+public extension Edge {
     
     /// - Returns: The edge opposite to the current edge.
     ///

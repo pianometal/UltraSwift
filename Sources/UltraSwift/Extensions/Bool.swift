@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-nonisolated public extension Bool {
+public extension Bool {
     
     /// A localized-ready string intended for display to users
     ///

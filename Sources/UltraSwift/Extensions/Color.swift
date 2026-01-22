@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-nonisolated public extension Color {
+public extension Color {
     
     /// - Returns: The localized capitalized name of the color based on its description.
     ///

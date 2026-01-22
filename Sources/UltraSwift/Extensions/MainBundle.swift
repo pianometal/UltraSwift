@@ -19,7 +19,7 @@ import Foundation
 /// - Fetching specific string values from Info.plist keys (e.g., CFBundleName, CFBundleShortVersionString).
 ///
 /// - Authors: [@pianometal](https://github.com/pianometal)
-nonisolated public enum MainBundle {
+public enum MainBundle {
     
     /// The app’s bundle identifier string from the main bundle.
     ///

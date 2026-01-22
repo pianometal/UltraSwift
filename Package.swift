@@ -19,24 +19,19 @@ let package = Package(
         .library(name: name, targets: [name]),
     ],
     targets: [
-        .target(
-            name: name,
-            swiftSettings: swiftSettings
-        ),
+        .target(name: name, swiftSettings: swiftSettings),
         .testTarget(
             name: "UltraSwiftTests",
             dependencies: ["UltraSwift"],
             swiftSettings: swiftSettings
         ),
     ],
-    swiftLanguageModes: [
-        .v6
-    ],
+    swiftLanguageModes: [.v6],
 )
 
 /// - Returns: An array of Swift settings for the package targets.
 private let swiftSettings: [SwiftSetting] = [
-    .defaultIsolation(nil),
+    .defaultIsolation(MainActor.self),
     .enableUpcomingFeature("StrictConcurrency"),
     .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
     .enableUpcomingFeature("InferIsolatedConformances"),

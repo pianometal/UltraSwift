@@ -9,7 +9,7 @@
 import Network
 import SwiftUI
 
-nonisolated public extension NWInterface.InterfaceType {
+public extension NWInterface.InterfaceType {
     
     /// - Returns: A `Color` associated with the interface type.
     ///

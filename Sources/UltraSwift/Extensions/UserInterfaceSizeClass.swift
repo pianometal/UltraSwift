@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-nonisolated public extension UserInterfaceSizeClass {
+public extension UserInterfaceSizeClass {
     
     /// - Returns: A string representing the size class.
     ///
@@ -22,7 +22,7 @@ nonisolated public extension UserInterfaceSizeClass {
     }
 }
 
-nonisolated public extension UserInterfaceSizeClass? {
+public extension UserInterfaceSizeClass? {
     
     /// - SeeAlso: `UserInterfaceSizeClass.name`
     ///

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-nonisolated public extension GridItem {
+public extension GridItem {
     
     /// Creates an array of flexible `GridItem` instances for use with `LazyVGrid` or `LazyHGrid`.
     ///

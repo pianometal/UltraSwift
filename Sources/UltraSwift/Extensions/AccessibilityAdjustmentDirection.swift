@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-nonisolated public extension AccessibilityAdjustmentDirection {
+public extension AccessibilityAdjustmentDirection {
     
     /// - Returns: A detailed description of the adjustment direction.
     ///
